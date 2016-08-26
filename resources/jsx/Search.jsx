@@ -1,5 +1,7 @@
-import jQuery from 'jquery';
+global.jQuery = require('jquery');
 import $ from 'jquery';
+
+import Bootstrap from 'bootstrap3';
 import React from 'react';
 const Giphy = require('giphy-api')();
 
@@ -10,9 +12,16 @@ class Search extends React.Component {
   constructor() {
     super();
     this.state = {
-      data: []
+      data: [],
+      trending: []
     }
     this.searchHandler = this.searchHandler.bind(this);
+  }
+
+  componentDidMount() {
+    Giphy.trending({limit: 5}, (err, res) => {
+      this.setState({trending: res.data});
+    })
   }
 
   searchHandler(event) {
@@ -20,7 +29,7 @@ class Search extends React.Component {
     let searchTerm = $('#searchInput').val();
 
     Giphy.search(searchTerm, (err, res) => {
-      this.setState({data: res.data})
+      this.setState({data: res.data});
     })
   }
 
@@ -36,7 +45,7 @@ class Search extends React.Component {
           </div>
           <button type="submit" className="btn btn-default" onClick={this.searchHandler}>Search</button>
         </form>
-        <SearchResults data={this.state.data} />
+        <SearchResults data={this.state.data} trending={this.state.trending} />
       </div>
     )
   }

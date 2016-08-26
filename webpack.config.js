@@ -29,7 +29,11 @@ if (production) {
     );
     plugins.unshift(
         new webpack.HotModuleReplacementPlugin(),
-        new webpack.NoErrorsPlugin()
+        new webpack.NoErrorsPlugin(),
+        new webpack.ProvidePlugin({
+          $: "jquery",
+          jQuery: "jquery"
+        })
     );
     jsLoaders.unshift('react-hot');
 }

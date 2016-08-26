@@ -11,6 +11,7 @@
     "babel-eslint": "^4.0.10",
     "babel-loader": "^5",
     "bootstrap": "^3.3.7",
+    "bootstrap3": "^3.3.5",
     "css-loader": "^0.23.1",
     "eslint": "^1.2.0",
     "eslint-plugin-babel": "^2.1.1",
