@@ -8,22 +8,27 @@
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^4.3.0",
+    "babel-eslint": "^4.0.10",
     "babel-loader": "^5",
-    "bootstrap": "^3",
+    "bootstrap": "^3.3.7",
+    "css-loader": "^0.23.1",
+    "eslint": "^1.2.0",
+    "eslint-plugin-babel": "^2.1.1",
+    "eslint-plugin-react": "^3.2.3",
+    "file-loader": "^0.8.5",
+    "giphy-api": "^1.2.1",
     "imports-loader": "^0.6",
+    "jquery": "^3.1.0",
     "less": "^2",
     "less-loader": "^2",
+    "lodash": "^4.15.0",
     "react": "^0.13",
+    "react-flipcard": "^0.2.1",
     "react-hot-loader": "^1.2",
     "style-loader": "^0.12",
     "url-loader": "^0.5",
     "webpack": "^1.10",
-    "webpack-dev-server": "^1.10",
-    "babel-eslint": "^4.0.10",
-    "eslint": "^1.2.0",
-    "eslint-plugin-babel": "^2.1.1",
-    "eslint-plugin-react": "^3.2.3",
-    "css-loader": "^0.23.1",
-    "file-loader": "^0.8.5"
-  }
+    "webpack-dev-server": "^1.10"
+  },
+  "dependencies": {}
 }

@@ -1,4 +1,4 @@
 import React from 'react';
-import HelloMessage from './HelloMessage';
+import Search  from './Search';
 
-React.render(<HelloMessage name="World" />, document.getElementById('content'));
+React.render(<Search />, document.getElementById('content'));
